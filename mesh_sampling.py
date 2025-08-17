@@ -99,7 +99,8 @@ def main():
     center = (min_pt + max_pt) / 2
     half = np.max(max_pt - min_pt)
     # camera positions on cube faces (use numpy arrays for vector arithmetic)
-    directions = np.array([[0,-1,0],[1,0,0],[0,1,0],[-1,0,0],[0,0,1],[0,0,-1]])
+    # directions = np.array([[0,-1,0],[1,0,0],[0,1,0],[-1,0,0],[0,0,1],[0,0,-1]])
+    directions = np.array([[-1,0,0],[0,0,1]])
     cameras = [center + dir_vec * half for dir_vec in directions]
 
     # step2: HPR from multiple views

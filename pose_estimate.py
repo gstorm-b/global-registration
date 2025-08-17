@@ -46,9 +46,9 @@ def estimate_pose_global(model: o3d.geometry.PointCloud,
     s_down = scene.voxel_down_sample(voxel_size)
     # Normals
     m_down.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamHybrid(
-        radius=voxel_size * 2, max_nn=30))
+        radius=voxel_size * 2, max_nn=50))
     s_down.estimate_normals(search_param=o3d.geometry.KDTreeSearchParamHybrid(
-        radius=voxel_size * 2, max_nn=30))
+        radius=voxel_size * 2, max_nn=50))
     # FPFH features
     m_fpfh = o3d.pipelines.registration.compute_fpfh_feature(
         m_down, search_param=o3d.geometry.KDTreeSearchParamHybrid(
@@ -99,24 +99,24 @@ def main():
         raise RuntimeError("Cannot load model or scene.")
 
     # Extract visible portion of model
-    visible_model = extract_visible_model(model, scene)
-    print(f"Visible model pts: {len(visible_model.points)}")
+    # visible_model = extract_visible_model(model, scene)
+    # print(f"Visible model pts: {len(visible_model.points)}")
 
     # Visualize visible part vs scene
     axis = o3d.geometry.TriangleMesh.create_coordinate_frame(size=args.voxel * 5)
     print("Inspect visible model and scene. Close window to start registration.")
-    o3d.visualization.draw_geometries([visible_model, scene, axis])
+    o3d.visualization.draw_geometries([model, scene, axis])
 
     # Estimate pose globally
-    result = estimate_pose_global(visible_model, scene, voxel_size=args.voxel)
+    result = estimate_pose_global(model, scene, voxel_size=args.voxel)
     print("Global Registration Result")
     print("Fitness:", result.fitness)
     print("Transformation:\n", result.transformation)
 
     # Apply transform for visual check
-    visible_model.transform(result.transformation)
+    model.transform(result.transformation)
     print("Check alignment before ICP. Close window to continue.")
-    o3d.visualization.draw_geometries([visible_model, scene, axis])
+    o3d.visualization.draw_geometries([model, scene, axis])
 
     # Refine using ICP
     print("Running ICP refinement...")

@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/PCL 1.15.0/cmake/PCLConfig.cmake
+C:/Program Files/PCL 1.15.0/cmake/PCLConfigVersion.cmake
+C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake
+C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake
+C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPkgConfig.cmake
+D:/Bin picking/PointMatch/include/configReader/CMakeLists.txt

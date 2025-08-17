@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/include/**",
+                "${workspaceFolder}/third_party/**",
+                "${workspaceFolder}/apps/**",
+                "C:/Program Files/PCL 1.15.0/include/pcl-1.15",
+                "C:/Program Files/PCL 1.15.0/3rdParty/Eigen3/include/eigen3/",
+                "C:/Program Files/PCL 1.15.0/3rdParty/Boost/include/boost-1_87/",
+                "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/",
+                "C:/Program Files/PCL 1.15.0/3rdParty/FLANN/include/",
+                "C:/Program Files/OpenNI2/Include/",
+                "C:/opencv/build/include/"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.22621.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}

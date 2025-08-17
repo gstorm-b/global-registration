@@ -1,0 +1,15 @@
+{
+  "camera": {
+    "fx": 525.0,
+    "fy": 525.0,
+    "cx": 319.5,
+    "cy": 239.5
+  },
+  "name": "PointMatch",
+  "model_path": "D:/Bin picking/PointMatch/data/K41144.stl",
+  "model_pcd_path": "D:/Bin picking/PointMatch/data/K41144_out.pcd",
+  "model_write_to_pcd": false,
+  "model_write_path": "D:/Bin picking/PointMatch/data/K41144_out.pcd",
+  "scene_pcd_path": "D:/Bin picking/PointMatch/data/view/view_00.pcd",
+  "scene_write_path" : "D:/Bin picking/PointMatch/data/scene_out.pcd"
+}

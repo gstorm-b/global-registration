@@ -1,0 +1,9 @@
+D:/Bin picking/PointMatch/build/CMakeFiles/ALL_BUILD.dir
+D:/Bin picking/PointMatch/build/CMakeFiles/ZERO_CHECK.dir
+D:/Bin picking/PointMatch/build/include/dataType/CMakeFiles/dataType.dir
+D:/Bin picking/PointMatch/build/include/pclFunction/CMakeFiles/pclFunction.dir
+D:/Bin picking/PointMatch/build/include/meshSampling/CMakeFiles/meshSampling.dir
+D:/Bin picking/PointMatch/build/include/HPR/CMakeFiles/HPR.dir
+D:/Bin picking/PointMatch/build/include/PPF/CMakeFiles/PPF.dir
+D:/Bin picking/PointMatch/build/include/configReader/CMakeFiles/configReader.dir
+D:/Bin picking/PointMatch/build/apps/CMakeFiles/PointMatch.dir

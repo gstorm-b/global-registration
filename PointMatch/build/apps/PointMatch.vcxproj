@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F5A70CEB-AF74-3409-90D7-738D22FC27FA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>PointMatch</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Bin picking\PointMatch\build\apps\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PointMatch.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PointMatch</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Bin picking\PointMatch\build\apps\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PointMatch.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PointMatch</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Bin picking\PointMatch\build\apps\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">PointMatch.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">PointMatch</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Bin picking\PointMatch\build\apps\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">PointMatch.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">PointMatch</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Bin picking\PointMatch\include\pclFunction;D:\Bin picking\PointMatch\include\PPF;D:\Bin picking\PointMatch\include\configReader;D:\Bin picking\PointMatch\include\meshSampling;D:\Bin picking\PointMatch\include\HPR;D:\Bin picking\PointMatch\include\dataType;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Program Files/PCL 1.15.0/include/pcl-1.15" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/Eigen3/include/eigen3" /external:I "C:/Program Files/OpenNI2/Include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/Boost/include/boost-1_87" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/token" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtknlohmannjson/include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtknlohmannjson" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkkissfft" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkfreetype/include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkzlib" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkglad" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/FLANN/include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/Qhull/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;__SSE4_2__;__SSE4_1__;__SSSE3__;__SSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;BOOST_SYSTEM_NO_LIB;BOOST_IOSTREAMS_NO_LIB;BOOST_BZIP2_NO_LIB;BOOST_RANDOM_NO_LIB;BOOST_REGEX_NO_LIB;BOOST_ZLIB_NO_LIB;BOOST_FILESYSTEM_NO_LIB;BOOST_ATOMIC_NO_LIB;BOOST_SERIALIZATION_NO_LIB;kiss_fft_scalar=double;KISSFFT_DLL_IMPORT=1;GLAD_API_CALL_EXPORT;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;__SSE4_2__;__SSE4_1__;__SSSE3__;__SSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;BOOST_SYSTEM_NO_LIB;BOOST_IOSTREAMS_NO_LIB;BOOST_BZIP2_NO_LIB;BOOST_RANDOM_NO_LIB;BOOST_REGEX_NO_LIB;BOOST_ZLIB_NO_LIB;BOOST_FILESYSTEM_NO_LIB;BOOST_ATOMIC_NO_LIB;BOOST_SERIALIZATION_NO_LIB;kiss_fft_scalar=double;KISSFFT_DLL_IMPORT=1;GLAD_API_CALL_EXPORT;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Bin picking\PointMatch\include\pclFunction;D:\Bin picking\PointMatch\include\PPF;D:\Bin picking\PointMatch\include\configReader;D:\Bin picking\PointMatch\include\meshSampling;D:\Bin picking\PointMatch\include\HPR;D:\Bin picking\PointMatch\include\dataType;C:\Program Files\PCL 1.15.0\include\pcl-1.15;C:\Program Files\PCL 1.15.0\3rdParty\Eigen3\include\eigen3;C:\Program Files\OpenNI2\Include;C:\Program Files\PCL 1.15.0\3rdParty\Boost\include\boost-1_87;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\token;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkkissfft;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkfreetype\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkzlib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkglad;C:\Program Files\PCL 1.15.0\3rdParty\FLANN\include;C:\Program Files\PCL 1.15.0\3rdParty\Qhull\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Bin picking\PointMatch\include\pclFunction;D:\Bin picking\PointMatch\include\PPF;D:\Bin picking\PointMatch\include\configReader;D:\Bin picking\PointMatch\include\meshSampling;D:\Bin picking\PointMatch\include\HPR;D:\Bin picking\PointMatch\include\dataType;C:\Program Files\PCL 1.15.0\include\pcl-1.15;C:\Program Files\PCL 1.15.0\3rdParty\Eigen3\include\eigen3;C:\Program Files\OpenNI2\Include;C:\Program Files\PCL 1.15.0\3rdParty\Boost\include\boost-1_87;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\token;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkkissfft;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkfreetype\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkzlib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkglad;C:\Program Files\PCL 1.15.0\3rdParty\FLANN\include;C:\Program Files\PCL 1.15.0\3rdParty\Qhull\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\include\PPF\Debug\PPF.lib;..\include\configReader\Debug\configReader.lib;..\include\pclFunction\Debug\pclFunction.lib;..\include\dataType\Debug\dataType.lib;..\include\meshSampling\Debug\meshSampling.lib;..\include\HPR\Debug\HPR.lib;C:\Program Files\PCL 1.15.0\lib\pcl_surfaced.lib;C:\Program Files\PCL 1.15.0\lib\pcl_keypointsd.lib;C:\Program Files\PCL 1.15.0\lib\pcl_trackingd.lib;C:\Program Files\PCL 1.15.0\lib\pcl_recognitiond.lib;C:\Program Files\PCL 1.15.0\lib\pcl_registrationd.lib;C:\Program Files\PCL 1.15.0\lib\pcl_stereod.lib;C:\Program Files\PCL 1.15.0\lib\pcl_outofcored.lib;C:\Program Files\PCL 1.15.0\lib\pcl_peopled.lib;C:\Program Files\PCL 1.15.0\lib\pcl_segmentationd.lib;C:\Program Files\PCL 1.15.0\lib\pcl_featuresd.lib;C:\Program Files\PCL 1.15.0\lib\pcl_filtersd.lib;C:\Program Files\PCL 1.15.0\lib\pcl_sample_consensusd.lib;C:\Program Files\PCL 1.15.0\lib\pcl_mld.lib;C:\Program Files\PCL 1.15.0\lib\pcl_visualizationd.lib;C:\Program Files\PCL 1.15.0\lib\pcl_searchd.lib;C:\Program Files\PCL 1.15.0\lib\pcl_kdtreed.lib;C:\Program Files\PCL 1.15.0\lib\pcl_iod.lib;C:\Program Files\PCL 1.15.0\lib\pcl_octreed.lib;C:\Program Files\PCL 1.15.0\lib\pcl_io_plyd.lib;C:\Program Files\PCL 1.15.0\lib\pcl_commond.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_iostreams-vc143-mt-gd-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_bzip2-vc143-mt-gd-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_random-vc143-mt-gd-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_regex-vc143-mt-gd-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_zlib-vc143-mt-gd-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_filesystem-vc143-mt-gd-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_system-vc143-mt-gd-x64-1_87.lib;bcrypt.lib;synchronization.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_atomic-vc143-mt-gd-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_serialization-vc143-mt-gd-x64-1_87.lib;C:\Program Files\OpenNI2\Lib\OpenNI2.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkChartsCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkInteractionImage-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOGeometry-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOPLY-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingLOD-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkViewsContext2D-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkViewsCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkInteractionWidgets-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersModeling-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkInteractionStyle-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersExtraction-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOLegacy-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOCellGrid-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersCellGrid-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingAnnotation-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingContextOpenGL2-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingContext2D-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingFreeType-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkfreetype-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingOpenGL2-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOImage-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkzlib-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingHyperTreeGrid-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkImagingSources-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkImagingCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingUI-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonColor-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersSources-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersGeneral-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonComputationalGeometry-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersGeometry-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonExecutionModel-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonDataModel-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonTransforms-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonMisc-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonMath-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkkissfft-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtktoken-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtksys-9.4-gd.lib;ws2_32.lib;dbghelp.lib;psapi.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkglad-9.4-gd.lib;opengl32.lib;C:\Program Files\PCL 1.15.0\3rdParty\FLANN\lib\flann_cpp_s.lib;C:\Program Files\PCL 1.15.0\3rdParty\Qhull\lib\qhullstatic_rd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Bin picking/PointMatch/build/apps/Debug/PointMatch.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Bin picking/PointMatch/build/apps/Debug/PointMatch.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Bin picking\PointMatch\include\pclFunction;D:\Bin picking\PointMatch\include\PPF;D:\Bin picking\PointMatch\include\configReader;D:\Bin picking\PointMatch\include\meshSampling;D:\Bin picking\PointMatch\include\HPR;D:\Bin picking\PointMatch\include\dataType;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Program Files/PCL 1.15.0/include/pcl-1.15" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/Eigen3/include/eigen3" /external:I "C:/Program Files/OpenNI2/Include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/Boost/include/boost-1_87" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/token" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtknlohmannjson/include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtknlohmannjson" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkkissfft" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkfreetype/include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkzlib" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkglad" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/FLANN/include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/Qhull/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE4_2__;__SSE4_1__;__SSSE3__;__SSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;BOOST_SYSTEM_NO_LIB;BOOST_IOSTREAMS_NO_LIB;BOOST_BZIP2_NO_LIB;BOOST_RANDOM_NO_LIB;BOOST_REGEX_NO_LIB;BOOST_ZLIB_NO_LIB;BOOST_FILESYSTEM_NO_LIB;BOOST_ATOMIC_NO_LIB;BOOST_SERIALIZATION_NO_LIB;kiss_fft_scalar=double;KISSFFT_DLL_IMPORT=1;GLAD_API_CALL_EXPORT;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE4_2__;__SSE4_1__;__SSSE3__;__SSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;BOOST_SYSTEM_NO_LIB;BOOST_IOSTREAMS_NO_LIB;BOOST_BZIP2_NO_LIB;BOOST_RANDOM_NO_LIB;BOOST_REGEX_NO_LIB;BOOST_ZLIB_NO_LIB;BOOST_FILESYSTEM_NO_LIB;BOOST_ATOMIC_NO_LIB;BOOST_SERIALIZATION_NO_LIB;kiss_fft_scalar=double;KISSFFT_DLL_IMPORT=1;GLAD_API_CALL_EXPORT;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Bin picking\PointMatch\include\pclFunction;D:\Bin picking\PointMatch\include\PPF;D:\Bin picking\PointMatch\include\configReader;D:\Bin picking\PointMatch\include\meshSampling;D:\Bin picking\PointMatch\include\HPR;D:\Bin picking\PointMatch\include\dataType;C:\Program Files\PCL 1.15.0\include\pcl-1.15;C:\Program Files\PCL 1.15.0\3rdParty\Eigen3\include\eigen3;C:\Program Files\OpenNI2\Include;C:\Program Files\PCL 1.15.0\3rdParty\Boost\include\boost-1_87;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\token;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkkissfft;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkfreetype\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkzlib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkglad;C:\Program Files\PCL 1.15.0\3rdParty\FLANN\include;C:\Program Files\PCL 1.15.0\3rdParty\Qhull\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Bin picking\PointMatch\include\pclFunction;D:\Bin picking\PointMatch\include\PPF;D:\Bin picking\PointMatch\include\configReader;D:\Bin picking\PointMatch\include\meshSampling;D:\Bin picking\PointMatch\include\HPR;D:\Bin picking\PointMatch\include\dataType;C:\Program Files\PCL 1.15.0\include\pcl-1.15;C:\Program Files\PCL 1.15.0\3rdParty\Eigen3\include\eigen3;C:\Program Files\OpenNI2\Include;C:\Program Files\PCL 1.15.0\3rdParty\Boost\include\boost-1_87;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\token;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkkissfft;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkfreetype\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkzlib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkglad;C:\Program Files\PCL 1.15.0\3rdParty\FLANN\include;C:\Program Files\PCL 1.15.0\3rdParty\Qhull\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\include\PPF\Release\PPF.lib;..\include\configReader\Release\configReader.lib;..\include\pclFunction\Release\pclFunction.lib;..\include\dataType\Release\dataType.lib;..\include\meshSampling\Release\meshSampling.lib;..\include\HPR\Release\HPR.lib;C:\Program Files\PCL 1.15.0\lib\pcl_surface.lib;C:\Program Files\PCL 1.15.0\lib\pcl_keypoints.lib;C:\Program Files\PCL 1.15.0\lib\pcl_tracking.lib;C:\Program Files\PCL 1.15.0\lib\pcl_recognition.lib;C:\Program Files\PCL 1.15.0\lib\pcl_registration.lib;C:\Program Files\PCL 1.15.0\lib\pcl_stereo.lib;C:\Program Files\PCL 1.15.0\lib\pcl_outofcore.lib;C:\Program Files\PCL 1.15.0\lib\pcl_people.lib;C:\Program Files\PCL 1.15.0\lib\pcl_segmentation.lib;C:\Program Files\PCL 1.15.0\lib\pcl_features.lib;C:\Program Files\PCL 1.15.0\lib\pcl_filters.lib;C:\Program Files\PCL 1.15.0\lib\pcl_sample_consensus.lib;C:\Program Files\PCL 1.15.0\lib\pcl_ml.lib;C:\Program Files\PCL 1.15.0\lib\pcl_visualization.lib;C:\Program Files\PCL 1.15.0\lib\pcl_search.lib;C:\Program Files\PCL 1.15.0\lib\pcl_kdtree.lib;C:\Program Files\PCL 1.15.0\lib\pcl_io.lib;C:\Program Files\PCL 1.15.0\lib\pcl_octree.lib;C:\Program Files\PCL 1.15.0\lib\pcl_io_ply.lib;C:\Program Files\PCL 1.15.0\lib\pcl_common.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_iostreams-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_bzip2-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_random-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_regex-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_zlib-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_filesystem-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_system-vc143-mt-x64-1_87.lib;bcrypt.lib;synchronization.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_atomic-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_serialization-vc143-mt-x64-1_87.lib;C:\Program Files\OpenNI2\Lib\OpenNI2.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkChartsCore-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkInteractionImage-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOGeometry-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOPLY-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingLOD-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkViewsContext2D-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkViewsCore-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkInteractionWidgets-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersModeling-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkInteractionStyle-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersExtraction-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOLegacy-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOCellGrid-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersCellGrid-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOCore-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingAnnotation-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingContextOpenGL2-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingContext2D-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingFreeType-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkfreetype-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingOpenGL2-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOImage-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkzlib-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingHyperTreeGrid-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkImagingSources-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkImagingCore-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingUI-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingCore-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonColor-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersSources-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersGeneral-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonComputationalGeometry-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersGeometry-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersCore-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonExecutionModel-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonDataModel-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonTransforms-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonMisc-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonMath-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkkissfft-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonCore-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtktoken-9.4.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtksys-9.4.lib;ws2_32.lib;dbghelp.lib;psapi.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkglad-9.4.lib;opengl32.lib;C:\Program Files\PCL 1.15.0\3rdParty\FLANN\lib\flann_cpp_s.lib;C:\Program Files\PCL 1.15.0\3rdParty\Qhull\lib\qhullstatic_r.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Bin picking/PointMatch/build/apps/Release/PointMatch.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Bin picking/PointMatch/build/apps/Release/PointMatch.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Bin picking\PointMatch\include\pclFunction;D:\Bin picking\PointMatch\include\PPF;D:\Bin picking\PointMatch\include\configReader;D:\Bin picking\PointMatch\include\meshSampling;D:\Bin picking\PointMatch\include\HPR;D:\Bin picking\PointMatch\include\dataType;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Program Files/PCL 1.15.0/include/pcl-1.15" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/Eigen3/include/eigen3" /external:I "C:/Program Files/OpenNI2/Include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/Boost/include/boost-1_87" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/token" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtknlohmannjson/include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtknlohmannjson" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkkissfft" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkfreetype/include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkzlib" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkglad" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/FLANN/include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/Qhull/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE4_2__;__SSE4_1__;__SSSE3__;__SSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;BOOST_SYSTEM_NO_LIB;BOOST_IOSTREAMS_NO_LIB;BOOST_BZIP2_NO_LIB;BOOST_RANDOM_NO_LIB;BOOST_REGEX_NO_LIB;BOOST_ZLIB_NO_LIB;BOOST_FILESYSTEM_NO_LIB;BOOST_ATOMIC_NO_LIB;BOOST_SERIALIZATION_NO_LIB;kiss_fft_scalar=double;KISSFFT_DLL_IMPORT=1;GLAD_API_CALL_EXPORT;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE4_2__;__SSE4_1__;__SSSE3__;__SSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;BOOST_SYSTEM_NO_LIB;BOOST_IOSTREAMS_NO_LIB;BOOST_BZIP2_NO_LIB;BOOST_RANDOM_NO_LIB;BOOST_REGEX_NO_LIB;BOOST_ZLIB_NO_LIB;BOOST_FILESYSTEM_NO_LIB;BOOST_ATOMIC_NO_LIB;BOOST_SERIALIZATION_NO_LIB;kiss_fft_scalar=double;KISSFFT_DLL_IMPORT=1;GLAD_API_CALL_EXPORT;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Bin picking\PointMatch\include\pclFunction;D:\Bin picking\PointMatch\include\PPF;D:\Bin picking\PointMatch\include\configReader;D:\Bin picking\PointMatch\include\meshSampling;D:\Bin picking\PointMatch\include\HPR;D:\Bin picking\PointMatch\include\dataType;C:\Program Files\PCL 1.15.0\include\pcl-1.15;C:\Program Files\PCL 1.15.0\3rdParty\Eigen3\include\eigen3;C:\Program Files\OpenNI2\Include;C:\Program Files\PCL 1.15.0\3rdParty\Boost\include\boost-1_87;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\token;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkkissfft;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkfreetype\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkzlib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkglad;C:\Program Files\PCL 1.15.0\3rdParty\FLANN\include;C:\Program Files\PCL 1.15.0\3rdParty\Qhull\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Bin picking\PointMatch\include\pclFunction;D:\Bin picking\PointMatch\include\PPF;D:\Bin picking\PointMatch\include\configReader;D:\Bin picking\PointMatch\include\meshSampling;D:\Bin picking\PointMatch\include\HPR;D:\Bin picking\PointMatch\include\dataType;C:\Program Files\PCL 1.15.0\include\pcl-1.15;C:\Program Files\PCL 1.15.0\3rdParty\Eigen3\include\eigen3;C:\Program Files\OpenNI2\Include;C:\Program Files\PCL 1.15.0\3rdParty\Boost\include\boost-1_87;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\token;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkkissfft;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkfreetype\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkzlib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkglad;C:\Program Files\PCL 1.15.0\3rdParty\FLANN\include;C:\Program Files\PCL 1.15.0\3rdParty\Qhull\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\include\PPF\MinSizeRel\PPF.lib;..\include\configReader\MinSizeRel\configReader.lib;..\include\pclFunction\MinSizeRel\pclFunction.lib;..\include\dataType\MinSizeRel\dataType.lib;..\include\meshSampling\MinSizeRel\meshSampling.lib;..\include\HPR\MinSizeRel\HPR.lib;C:\Program Files\PCL 1.15.0\lib\pcl_surface.lib;C:\Program Files\PCL 1.15.0\lib\pcl_keypoints.lib;C:\Program Files\PCL 1.15.0\lib\pcl_tracking.lib;C:\Program Files\PCL 1.15.0\lib\pcl_recognition.lib;C:\Program Files\PCL 1.15.0\lib\pcl_registration.lib;C:\Program Files\PCL 1.15.0\lib\pcl_stereo.lib;C:\Program Files\PCL 1.15.0\lib\pcl_outofcore.lib;C:\Program Files\PCL 1.15.0\lib\pcl_people.lib;C:\Program Files\PCL 1.15.0\lib\pcl_segmentation.lib;C:\Program Files\PCL 1.15.0\lib\pcl_features.lib;C:\Program Files\PCL 1.15.0\lib\pcl_filters.lib;C:\Program Files\PCL 1.15.0\lib\pcl_sample_consensus.lib;C:\Program Files\PCL 1.15.0\lib\pcl_ml.lib;C:\Program Files\PCL 1.15.0\lib\pcl_visualization.lib;C:\Program Files\PCL 1.15.0\lib\pcl_search.lib;C:\Program Files\PCL 1.15.0\lib\pcl_kdtree.lib;C:\Program Files\PCL 1.15.0\lib\pcl_io.lib;C:\Program Files\PCL 1.15.0\lib\pcl_octree.lib;C:\Program Files\PCL 1.15.0\lib\pcl_io_ply.lib;C:\Program Files\PCL 1.15.0\lib\pcl_common.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_iostreams-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_bzip2-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_random-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_regex-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_zlib-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_filesystem-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_system-vc143-mt-x64-1_87.lib;bcrypt.lib;synchronization.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_atomic-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_serialization-vc143-mt-x64-1_87.lib;C:\Program Files\OpenNI2\Lib\OpenNI2.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkChartsCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkInteractionImage-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOGeometry-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOPLY-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingLOD-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkViewsContext2D-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkViewsCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkInteractionWidgets-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersModeling-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkInteractionStyle-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersExtraction-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOLegacy-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOCellGrid-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersCellGrid-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingAnnotation-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingContextOpenGL2-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingContext2D-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingFreeType-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkfreetype-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingOpenGL2-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOImage-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkzlib-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingHyperTreeGrid-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkImagingSources-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkImagingCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingUI-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonColor-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersSources-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersGeneral-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonComputationalGeometry-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersGeometry-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonExecutionModel-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonDataModel-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonTransforms-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonMisc-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonMath-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkkissfft-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtktoken-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtksys-9.4-gd.lib;ws2_32.lib;dbghelp.lib;psapi.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkglad-9.4-gd.lib;opengl32.lib;C:\Program Files\PCL 1.15.0\3rdParty\FLANN\lib\flann_cpp_s.lib;C:\Program Files\PCL 1.15.0\3rdParty\Qhull\lib\qhullstatic_rd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Bin picking/PointMatch/build/apps/MinSizeRel/PointMatch.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Bin picking/PointMatch/build/apps/MinSizeRel/PointMatch.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Bin picking\PointMatch\include\pclFunction;D:\Bin picking\PointMatch\include\PPF;D:\Bin picking\PointMatch\include\configReader;D:\Bin picking\PointMatch\include\meshSampling;D:\Bin picking\PointMatch\include\HPR;D:\Bin picking\PointMatch\include\dataType;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Program Files/PCL 1.15.0/include/pcl-1.15" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/Eigen3/include/eigen3" /external:I "C:/Program Files/OpenNI2/Include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/Boost/include/boost-1_87" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/token" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtknlohmannjson/include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtknlohmannjson" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkkissfft" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkfreetype/include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkzlib" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/VTK/include/vtk-9.4/vtkglad" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/FLANN/include" /external:I "C:/Program Files/PCL 1.15.0/3rdParty/Qhull/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MinimalRebuild></MinimalRebuild>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE4_2__;__SSE4_1__;__SSSE3__;__SSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;BOOST_SYSTEM_NO_LIB;BOOST_IOSTREAMS_NO_LIB;BOOST_BZIP2_NO_LIB;BOOST_RANDOM_NO_LIB;BOOST_REGEX_NO_LIB;BOOST_ZLIB_NO_LIB;BOOST_FILESYSTEM_NO_LIB;BOOST_ATOMIC_NO_LIB;BOOST_SERIALIZATION_NO_LIB;kiss_fft_scalar=double;KISSFFT_DLL_IMPORT=1;GLAD_API_CALL_EXPORT;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;__SSE4_2__;__SSE4_1__;__SSSE3__;__SSE3__;__SSE2__;__SSE__;BOOST_ALL_NO_LIB;BOOST_SYSTEM_NO_LIB;BOOST_IOSTREAMS_NO_LIB;BOOST_BZIP2_NO_LIB;BOOST_RANDOM_NO_LIB;BOOST_REGEX_NO_LIB;BOOST_ZLIB_NO_LIB;BOOST_FILESYSTEM_NO_LIB;BOOST_ATOMIC_NO_LIB;BOOST_SERIALIZATION_NO_LIB;kiss_fft_scalar=double;KISSFFT_DLL_IMPORT=1;GLAD_API_CALL_EXPORT;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Bin picking\PointMatch\include\pclFunction;D:\Bin picking\PointMatch\include\PPF;D:\Bin picking\PointMatch\include\configReader;D:\Bin picking\PointMatch\include\meshSampling;D:\Bin picking\PointMatch\include\HPR;D:\Bin picking\PointMatch\include\dataType;C:\Program Files\PCL 1.15.0\include\pcl-1.15;C:\Program Files\PCL 1.15.0\3rdParty\Eigen3\include\eigen3;C:\Program Files\OpenNI2\Include;C:\Program Files\PCL 1.15.0\3rdParty\Boost\include\boost-1_87;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\token;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkkissfft;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkfreetype\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkzlib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkglad;C:\Program Files\PCL 1.15.0\3rdParty\FLANN\include;C:\Program Files\PCL 1.15.0\3rdParty\Qhull\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Bin picking\PointMatch\include\pclFunction;D:\Bin picking\PointMatch\include\PPF;D:\Bin picking\PointMatch\include\configReader;D:\Bin picking\PointMatch\include\meshSampling;D:\Bin picking\PointMatch\include\HPR;D:\Bin picking\PointMatch\include\dataType;C:\Program Files\PCL 1.15.0\include\pcl-1.15;C:\Program Files\PCL 1.15.0\3rdParty\Eigen3\include\eigen3;C:\Program Files\OpenNI2\Include;C:\Program Files\PCL 1.15.0\3rdParty\Boost\include\boost-1_87;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\token;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtknlohmannjson;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkkissfft;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkfreetype\include;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkzlib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\include\vtk-9.4\vtkglad;C:\Program Files\PCL 1.15.0\3rdParty\FLANN\include;C:\Program Files\PCL 1.15.0\3rdParty\Qhull\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\include\PPF\RelWithDebInfo\PPF.lib;..\include\configReader\RelWithDebInfo\configReader.lib;..\include\pclFunction\RelWithDebInfo\pclFunction.lib;..\include\dataType\RelWithDebInfo\dataType.lib;..\include\meshSampling\RelWithDebInfo\meshSampling.lib;..\include\HPR\RelWithDebInfo\HPR.lib;C:\Program Files\PCL 1.15.0\lib\pcl_surface.lib;C:\Program Files\PCL 1.15.0\lib\pcl_keypoints.lib;C:\Program Files\PCL 1.15.0\lib\pcl_tracking.lib;C:\Program Files\PCL 1.15.0\lib\pcl_recognition.lib;C:\Program Files\PCL 1.15.0\lib\pcl_registration.lib;C:\Program Files\PCL 1.15.0\lib\pcl_stereo.lib;C:\Program Files\PCL 1.15.0\lib\pcl_outofcore.lib;C:\Program Files\PCL 1.15.0\lib\pcl_people.lib;C:\Program Files\PCL 1.15.0\lib\pcl_segmentation.lib;C:\Program Files\PCL 1.15.0\lib\pcl_features.lib;C:\Program Files\PCL 1.15.0\lib\pcl_filters.lib;C:\Program Files\PCL 1.15.0\lib\pcl_sample_consensus.lib;C:\Program Files\PCL 1.15.0\lib\pcl_ml.lib;C:\Program Files\PCL 1.15.0\lib\pcl_visualization.lib;C:\Program Files\PCL 1.15.0\lib\pcl_search.lib;C:\Program Files\PCL 1.15.0\lib\pcl_kdtree.lib;C:\Program Files\PCL 1.15.0\lib\pcl_io.lib;C:\Program Files\PCL 1.15.0\lib\pcl_octree.lib;C:\Program Files\PCL 1.15.0\lib\pcl_io_ply.lib;C:\Program Files\PCL 1.15.0\lib\pcl_common.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_iostreams-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_bzip2-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_random-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_regex-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_zlib-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_filesystem-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_system-vc143-mt-x64-1_87.lib;bcrypt.lib;synchronization.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_atomic-vc143-mt-x64-1_87.lib;C:\Program Files\PCL 1.15.0\3rdParty\Boost\lib\libboost_serialization-vc143-mt-x64-1_87.lib;C:\Program Files\OpenNI2\Lib\OpenNI2.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkChartsCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkInteractionImage-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOGeometry-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOPLY-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingLOD-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkViewsContext2D-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkViewsCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkInteractionWidgets-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersModeling-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkInteractionStyle-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersExtraction-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOLegacy-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOCellGrid-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersCellGrid-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingAnnotation-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingContextOpenGL2-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingContext2D-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingFreeType-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkfreetype-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingOpenGL2-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkIOImage-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkzlib-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingHyperTreeGrid-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkImagingSources-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkImagingCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingUI-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkRenderingCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonColor-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersSources-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersGeneral-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonComputationalGeometry-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersGeometry-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkFiltersCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonExecutionModel-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonDataModel-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonTransforms-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonMisc-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonMath-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkkissfft-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkCommonCore-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtktoken-9.4-gd.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtksys-9.4-gd.lib;ws2_32.lib;dbghelp.lib;psapi.lib;C:\Program Files\PCL 1.15.0\3rdParty\VTK\lib\vtkglad-9.4-gd.lib;opengl32.lib;C:\Program Files\PCL 1.15.0\3rdParty\FLANN\lib\flann_cpp_s.lib;C:\Program Files\PCL 1.15.0\3rdParty\Qhull\lib\qhullstatic_rd.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Bin picking/PointMatch/build/apps/RelWithDebInfo/PointMatch.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Bin picking/PointMatch/build/apps/RelWithDebInfo/PointMatch.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Bin picking\PointMatch\apps\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Bin picking/PointMatch/apps/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe "-SD:/Bin picking/PointMatch" "-BD:/Bin picking/PointMatch/build" --check-stamp-file "D:/Bin picking/PointMatch/build/apps/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;D:\Bin picking\PointMatch\build\CMakeFiles\3.30.5\CMakeCCompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Bin picking\PointMatch\build\apps\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Bin picking/PointMatch/apps/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe "-SD:/Bin picking/PointMatch" "-BD:/Bin picking/PointMatch/build" --check-stamp-file "D:/Bin picking/PointMatch/build/apps/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;D:\Bin picking\PointMatch\build\CMakeFiles\3.30.5\CMakeCCompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Bin picking\PointMatch\build\apps\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Bin picking/PointMatch/apps/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe "-SD:/Bin picking/PointMatch" "-BD:/Bin picking/PointMatch/build" --check-stamp-file "D:/Bin picking/PointMatch/build/apps/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;D:\Bin picking\PointMatch\build\CMakeFiles\3.30.5\CMakeCCompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Bin picking\PointMatch\build\apps\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Bin picking/PointMatch/apps/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe "-SD:/Bin picking/PointMatch" "-BD:/Bin picking/PointMatch/build" --check-stamp-file "D:/Bin picking/PointMatch/build/apps/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;D:\Bin picking\PointMatch\build\CMakeFiles\3.30.5\CMakeCCompiler.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Bin picking\PointMatch\build\apps\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Bin picking\PointMatch\apps\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Bin picking\PointMatch\build\ZERO_CHECK.vcxproj">
+      <Project>{26A60914-BAB0-32DA-970C-A66BC0CA181D}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Bin picking\PointMatch\build\include\HPR\HPR.vcxproj">
+      <Project>{C28B39F8-B815-3945-91B9-9B1A301C6635}</Project>
+      <Name>HPR</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Bin picking\PointMatch\build\include\PPF\PPF.vcxproj">
+      <Project>{9CBFF3B1-FE46-31CB-B23F-F0863C733398}</Project>
+      <Name>PPF</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Bin picking\PointMatch\build\include\configReader\configReader.vcxproj">
+      <Project>{990FC224-FF52-3FDA-A503-00B859F93046}</Project>
+      <Name>configReader</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Bin picking\PointMatch\build\include\dataType\dataType.vcxproj">
+      <Project>{4914FCC8-63A0-3F76-A123-B61E8588E7CE}</Project>
+      <Name>dataType</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Bin picking\PointMatch\build\include\meshSampling\meshSampling.vcxproj">
+      <Project>{F19E28A1-FBF2-36A5-A062-5B00E2945A02}</Project>
+      <Name>meshSampling</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Bin picking\PointMatch\build\include\pclFunction\pclFunction.vcxproj">
+      <Project>{1B69F12F-D496-3294-BA36-E4E7F0532549}</Project>
+      <Name>pclFunction</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
