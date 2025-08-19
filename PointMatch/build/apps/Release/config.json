@@ -11,5 +11,27 @@
   "model_write_to_pcd": false,
   "model_write_path": "D:/Bin picking/PointMatch/data/K41144_out.pcd",
   "scene_pcd_path": "D:/Bin picking/PointMatch/data/view/view_00.pcd",
-  "scene_write_path" : "D:/Bin picking/PointMatch/data/scene_out.pcd"
+  "scene_write_path" : "D:/Bin picking/PointMatch/data/scene_out.pcd",
+
+  "thersh_point": 500,
+  "simulate_tx": 0.1,
+  "simulate_ty": 0.1,
+  "simulate_tz": 0.8,
+  "simulate_roll": 9.0,
+  "simulate_pitch": 180.0,
+  "simulate_yaw": 9.0,
+
+  "voxel_size": 0.005,
+  "normal_radius": 0.1,
+  "feature_radius": 0.1,
+  "sac_max_iters": 100000,
+  "number_of_sample": 3,
+  "sac_corr_randomness": 50,
+  "sac_sim_threshold": 0.90,
+  "sac_max_corr_dist": 0.05,
+  "sac_inlier_fraction": 0.025,
+  "icp_max_corr_dist": 0.02,
+  "icp_max_iters": 80,
+  "icp_trans_eps": 0.01,
+  "icp_fit_eps": 0.01
 }

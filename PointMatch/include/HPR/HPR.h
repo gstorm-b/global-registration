@@ -22,4 +22,6 @@
 
 void HPR(const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& cloud_in, std::vector<float> camera_pos, int param, pcl::PointCloud<pcl::PointXYZ>::Ptr& cloud_out); // Hidden Point Removal
 
+void HPRN(const pcl::PointCloud<pcl::PointNormal>::ConstPtr& cloud_in, std::vector<float> camera_pos, int param, pcl::PointCloud<pcl::PointNormal>::Ptr& cloud_out);
+
 #endif

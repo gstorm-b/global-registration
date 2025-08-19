@@ -4,6 +4,7 @@
 #include "pclFunction.h"
 #include "meshSampling.h"
 #include "HPR.h"
+#include "configReader.h"
 
 #include <pcl/common/common.h>
 #include <pcl/registration/boost_graph.h>
@@ -16,128 +17,88 @@
 // #include <unordered_map>
 #include <mutex>
 
-class SymmetryPoseEstimator {
-public:
-  // Kiểu dữ liệu PCL rút gọn
-  using PointT  = pcl::PointXYZ;
-  using CloudT  = pcl::PointCloud<PointT>;
-  using PointN  = pcl::PointNormal;
-  using CloudN  = pcl::PointCloud<PointN>;
-  struct FPFH33; // fwd (định nghĩa thực trong .cpp)
 
-  struct Params {
-    // I/O
-    std::string model_path;
-    std::string scene_path;
-    std::string out_dir = "pose_out";
+struct PoseEstimationParams {
+  // Preprocess
+  float voxel_size;           // [m] kích thước voxel (ví dụ 0.005f)
+  float normal_radius;        // [m] bán kính ước tính normal (ví dụ 0.01f)
+  float feature_radius;       // [m] bán kính FPFH (ví dụ 0.025f)
 
-	pcl::PointCloud<pcl::PointXYZ>::Ptr model_pcd = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>());
-	pcl::PointCloud<pcl::PointXYZ>::Ptr scene_pcd = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>());
+  // RANSAC prerejective (coarse)
+  int   sac_max_iters;        // ví dụ 50000
+  int number_of_sample;
+  int   sac_corr_randomness;  // k-láng giềng trong feature space, ví dụ 5
+  float sac_sim_threshold;    // [0..1], ví dụ 0.9f
+  float sac_max_corr_dist;    // [m], ví dụ 0.03f
+  float sac_inlier_fraction;  // ví dụ 0.25f
 
-    // Sampling & đặc trưng
-    float voxel = 0.003f;                 // voxel cho cả model/scene
-    std::optional<float> voxel_scene;     // nếu muốn khác voxel cho scene
-    float normal_radius = 0.01f;
-    float fpfh_radius = 0.025f;
+  // ICP refine (point-to-plane)
+  float icp_max_corr_dist;    // [m], ví dụ 0.02f
+  int   icp_max_iters;        // ví dụ 50
+  float icp_trans_eps;        // ví dụ 1e-6f
+  float icp_fit_eps;          // ví dụ 1e-6f
 
-    // Coarse (RANSAC FPFH)
-    float ransac_dist = 0.01f;
-    int   ransac_runs = 48;
+  // Tuỳ chọn: đưa vào initial guess
+  Eigen::Matrix4f T_init;
+  bool use_external_init;
 
-    // Đối xứng quay Cn
-    int   sym_n = 4;
-    Eigen::Vector3f sym_axis = Eigen::Vector3f(0,0,1);
-    float dedup_eps_deg = 3.0f;
-    float dedup_tau = 0.003f;
-    int   keep_topk = 10;
-
-    // ICP
-    float icp_corr = 0.01f;
-    int   icp_iter = 60;
-
-    // Scoring (visibility-aware)
-    Eigen::Vector3f cam = Eigen::Vector3f(0,0,0);
-    float trunc = 0.01f;
-    bool  export_all = false;
-
-    // STL sampling (nếu đọc STL)
-    float stl_sample_radius = 0.001f; // bán kính cho UniformSampling trên vertices
-  };
-
-  struct Candidate {
-    int   idx = -1;
-    Eigen::Matrix4f T = Eigen::Matrix4f::Identity();
-    double icp_fitness = 0;
-    double icp_rmse = 0;
-    double vis_rmse = 0;  // điểm chính để chọn (nhỏ là tốt)
-  };
-
-  struct Result {
-    bool success = false;
-    Eigen::Matrix4f T_best = Eigen::Matrix4f::Identity();
-    std::vector<Candidate> all;   // các ứng viên sau refine + scoring
-    std::string out_dir;          // nơi đã lưu file
-  };
-
-  struct Hypo { Eigen::Matrix4f T; float score; };
-
-public:
-  explicit SymmetryPoseEstimator(const Params& p);
-  ~SymmetryPoseEstimator() = default;
-
-  // Chạy toàn bộ pipeline và trả về kết quả
-  Result run();
-
-private:
-  // ===== Helper nội bộ =====
-  // I/O
-  bool loadCloudAny(const std::string& path, CloudT::Ptr& out) const;
-  CloudT::Ptr voxelDown(const CloudT::Ptr& in, float voxel) const;
-
-  // Normals & FPFH
-  CloudN::Ptr toWithNormals(const CloudT::Ptr& in, float normal_radius, const Eigen::Vector3f& view) const;
-  std::shared_ptr<pcl::PointCloud<FPFH33>> computeFPFH(const CloudN::Ptr& in, float radius) const;
-
-  // Coarse hypotheses
-  
-  std::vector<Hypo> generateMultiHypotheses(const CloudN::Ptr& model_n,
-                                            const CloudN::Ptr& scene_n,
-                                            const std::shared_ptr<pcl::PointCloud<FPFH33>>& f_model,
-                                            const std::shared_ptr<pcl::PointCloud<FPFH33>>& f_scene,
-                                            float base_dist, int runs) const;
-
-  // Đối xứng & dedup
-  static float so3Geodesic(const Eigen::Matrix3f& Ra, const Eigen::Matrix3f& Rb);
-  static std::vector<Eigen::Matrix3f> makeCn(const Eigen::Vector3f& axis, int n);
-  static bool equivalentUnderSym(const Eigen::Matrix3f& Ra, const Eigen::Matrix3f& Rb,
-                                 const std::vector<Eigen::Matrix3f>& G, float eps_deg);
-  static std::vector<Hypo> dedupHypotheses(const std::vector<Hypo>& hyps,
-                                           const std::vector<Eigen::Matrix3f>& G,
-                                           float eps_deg, float tau, int topk);
-
-  // ICP
-  Eigen::Matrix4f icpRefinePointToPlane(const CloudN::Ptr& model_n,
-                                        const CloudN::Ptr& scene_n,
-                                        const Eigen::Matrix4f& T0,
-                                        double& fitness_out, double& rmse_out) const;
-
-  // Scoring
-  CloudT::Ptr hiddenVisibleSubset(const CloudT::Ptr& pcd, const Eigen::Vector3f& cam,
-                                  float radius_scale=1.2f) const;
-  double visibilityAwareScore(const CloudT::Ptr& model_xyz,
-                              const CloudT::Ptr& scene_xyz,
-                              const Eigen::Matrix4f& T,
-                              const Eigen::Vector3f& cam,
-                              double trunc,
-                              CloudT::Ptr* visible_out=nullptr) const;
-
-  // Save
-  static void saveTransformTxt(const std::string& path, const Eigen::Matrix4f& T);
-  static void ensureDir(const std::string& path);
-
-private:
-  Params params_;
+  PoseEstimationParams();
 };
+
+// Trả về ma trận biến đổi T sao cho scene ≈ T * object
+// out_fitness: ICP fitness score (nhỏ hơn là tốt). Nếu RANSAC/ICP không hội tụ, trả về +inf.
+// out_aligned: (tuỳ chọn) point cloud object đã áp T (độ phân giải cao).
+Eigen::Matrix4f EstimatePoseRobustPCL(
+  const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& object_in,
+  const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& scene_in,
+  const PoseEstimationParams& params,
+  pcl::PointCloud<pcl::PointXYZ>::Ptr* out_coarse_aligned);
+
+  // ----- Tham số multi-hypothesis -----
+struct MultiHypothesisParams {
+  int   num_hypotheses;           // số lần sinh coarse pose (ví dụ 32)
+  int   refine_top_k;             // refine ICP cho K ứng viên tốt nhất (ví dụ 5)
+  float cluster_trans_eps;        // ngưỡng gom cụm theo t (m), ví dụ 0.01
+  float cluster_rot_deg;          // ngưỡng gom cụm theo góc (độ), ví dụ 5.0
+  float eval_inlier_dist_coarse;  // ngưỡng inlier khi chấm coarse (m)
+  float eval_inlier_dist_refine;  // ngưỡng inlier khi chấm refine (m)
+  float source_subsample_ratio;   // tỉ lệ random subsample nguồn mỗi lần (0.5..1.0)
+  unsigned int random_seed;       // seed cho RNG; có thể bỏ qua
+  bool  use_fixed_seed;           // true -> dùng seed cố định cho tái lập
+
+  MultiHypothesisParams();
+};
+
+// ----- Thông tin từng giả thuyết -----
+struct PoseHypothesis {
+  Eigen::Matrix4f T;          // transform ứng viên
+  float coarse_inlier_ratio;  // tỉ lệ inlier sau coarse
+  int   coarse_inliers;       // số inlier coarse
+  float icp_fitness;          // fitness sau ICP (nếu có refine)
+  int   refine_inliers;       // số inlier sau refine
+  bool  refined;              // đã refine hay chưa
+
+  PoseHypothesis()
+  : T(Eigen::Matrix4f::Identity()),
+    coarse_inlier_ratio(0.0f),
+    coarse_inliers(0),
+    icp_fitness(std::numeric_limits<float>::infinity()),
+    refine_inliers(0),
+    refined(false) {}
+};
+
+// ----- API: ước lượng pose đa giả thuyết -----
+// Trả về T_best. Nếu muốn dừng ở coarse, đặt refine_top_k=0.
+// out_all_hypotheses (tuỳ chọn) để xem mọi ứng viên & điểm số.
+Eigen::Matrix4f EstimatePoseMultiHypothesisPCL(
+  const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& object_in,
+  const pcl::PointCloud<pcl::PointXYZ>::ConstPtr& scene_in,
+  const PoseEstimationParams& base_params,
+  const MultiHypothesisParams& mh_params,
+  float* out_best_fitness,
+  pcl::PointCloud<pcl::PointXYZ>::Ptr* out_aligned,
+  std::vector<PoseHypothesis>* out_all_hypotheses);
+
 
 class DescriptorPPF {
 public:
@@ -150,23 +111,22 @@ public:
 	bool loadModelPCD();
 	void saveToPCD(std::string path);
 
-	void createSimScene();
+	void createSimScene(ConfigReader &cfg);
 
-	void match();
+	void match(ConfigReader &cfg);
 
 public:
 	CustomVisualizer customViewer;
 
-	
-	
 private:
 	std::string model_dir;
 	std::string model_pcd_dir;
 
-	pcl::PointCloud<pcl::PointXYZ>::Ptr model = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>());
 	pcl::PointCloud<pcl::PointXYZ>::Ptr model_sampling = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>());
-
+  
+	pcl::PointCloud<pcl::PointXYZ>::Ptr model = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>());
 	pcl::PointCloud<pcl::PointXYZ>::Ptr scene = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>());
+	pcl::PointCloud<pcl::PointXYZ>::Ptr scene_ori = pcl::PointCloud<pcl::PointXYZ>::Ptr(new pcl::PointCloud<pcl::PointXYZ>());
 
 
 	//Others
